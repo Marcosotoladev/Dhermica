@@ -1,0 +1,22 @@
+/* Header.css */
+.header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual tamaño */
+  gap: 10px; /* Espacio entre elementos */
+  justify-content: center; /* Centrar elementos horizontalmente */
+  align-items: center; /* Centrar elementos verticalmente */
+  background-color: var(--primary);
+  color: white;
+  /*padding: 10px;*/
+  text-align: center;
+}
+
+.header-item-2 {
+  
+  padding: 10px;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+}
+
+
+

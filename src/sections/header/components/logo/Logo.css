@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "AmsterdamFour";
+  src: url("./AmsterdamFour.ttf") format("truetype");
+  /*
+    font-weight: normal;
+    font-style: normal;
+    */
+}
+
+.logoContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.enfa {
+  color: var(--success);
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.name {
+  color: white;
+  font-size: 2rem;
+  font-family: "AmsterdamFour"; /* Aplica la fuente personalizada aquí */
+  font-weight: 400;
+  letter-spacing: 0.5rem;
+}

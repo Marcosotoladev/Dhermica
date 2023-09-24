@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.cdnfonts.com/css/the-amsterdam');
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary);
+    color: #fff;
+}
+
+.navbar-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+    /* Añadido para centrar el texto */
+    position: relative;
+    /* Añadido para controlar la posición */
+}
+
+.icon {
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+    position: absolute;/* Añadido para controlar la posición */
+    z-index: 1;/* Añadido para asegurar que el icono esté en la parte superior */
+    font-size: 1.5rem;
+}
+
+.text {
+    margin: 3px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    opacity: 0;
+    transition: all 0.6s ease-in-out;
+    position: relative;/* Añadido para controlar la posición */
+    z-index: 2;/* Añadido para asegurar que el texto esté en la parte superior */
+}
+
+.active {
+    color: var(--success);
+    /* Color activo al hacer clic */
+}
+
+.navbar-item:hover .icon {
+    transform: scale(1.1);
+    /* Icono agrandado al hacer hover */
+    color: var(--secundary);
+    /* Color al hacer hover */
+    margin-top: 1.5rem;
+    /* Desplazamiento hacia abajo al hacer hover */
+}
+
+.navbar-item:hover .text {
+    opacity: 1;
+    /* Aparición gradual del texto al hacer hover */
+}
