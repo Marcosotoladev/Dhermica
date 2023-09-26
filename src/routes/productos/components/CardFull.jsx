@@ -7,8 +7,7 @@ function Card() {
     <div className="card">
       <img src={D} alt="Paella dish" />
       <div className="card-content">
-        <h2>Shrimp and Chorizo Paella</h2>
-        <p className="subheader">September 14, 2016</p>
+        <h1>Shrimp and Chorizo Paella</h1>
         <p>
           This impressive paella is a perfect party dish and a fun meal to cook
           together with your guests. Add 1 cup of frozen peas along with the mussels,
