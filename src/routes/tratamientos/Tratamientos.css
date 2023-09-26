@@ -1,0 +1,6 @@
+.trataContainer{
+    background-color: var(--back);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
