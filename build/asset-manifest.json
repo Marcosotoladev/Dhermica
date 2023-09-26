@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.cd1ec51d.css",
+    "main.js": "/static/js/main.f49fd933.js",
+    "static/js/787.8d0b3719.chunk.js": "/static/js/787.8d0b3719.chunk.js",
+    "static/media/AmsterdamFour.ttf": "/static/media/AmsterdamFour.64154e4485e61ccc7cd9.ttf",
+    "static/media/D.png": "/static/media/D.44e4ffa36f205ebd5fff.png",
+    "index.html": "/index.html",
+    "main.cd1ec51d.css.map": "/static/css/main.cd1ec51d.css.map",
+    "main.f49fd933.js.map": "/static/js/main.f49fd933.js.map",
+    "787.8d0b3719.chunk.js.map": "/static/js/787.8d0b3719.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cd1ec51d.css",
+    "static/js/main.f49fd933.js"
+  ]
+}
