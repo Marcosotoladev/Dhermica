@@ -16,7 +16,7 @@ export default function CardTrata({ tratamientoData }) {
   return (
     <>
     <div className="cardTrata">
-    <Card sx={{ maxWidth: 300 }}>
+    <Card sx={{ maxWidth: 350 }}>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: grey[500] }} aria-label="recipe">
@@ -32,12 +32,12 @@ export default function CardTrata({ tratamientoData }) {
       <CardMedia
         component="img"
         alt={tratamientoData ? tratamientoData.alt : ''}
-        height="140"
+        height="200"
         image={tratamientoData ? tratamientoData.img : ''}
       />
       <CardContent>
         <Typography
-          variant="body2"
+          variant="h6"
           color="text.secondary"
           style={{ width: '100%', fontSize: '15px' }}
           align="center"
