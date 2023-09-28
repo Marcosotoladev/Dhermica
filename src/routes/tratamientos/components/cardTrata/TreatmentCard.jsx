@@ -1,11 +1,12 @@
 import React from 'react';
+import './TreatmentCard.css';
 
 const TreatmentCard = ({ tratamiento }) => {
   return (
     <div className="card">
       <div className="card-header">
         <div className="avatar">{tratamiento.avatar}</div>
-        <div className="name">{tratamiento.name}</div>
+        <div className="card-name">{tratamiento.name}</div>
       </div>
       <div className="card-body">
         <img src={tratamiento.img} alt={tratamiento.name} />
