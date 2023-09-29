@@ -1,6 +1,6 @@
 
 /* Estilos para cada tarjeta */
-.card {
+.card-unisex {
   font-family: 'Montserrat';
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -8,60 +8,50 @@
   background-color: #fff;
   transition: transform 0.2s;
   max-width: 70vh;
+  margin: 1rem;
 }
 
-.card:hover {
+.card-unisex:hover {
   transform: scale(1.05);
 }
 
-.card-header {
-  background-color: var(--back);
-  display: flex;
-  align-items: center;
-  padding: 1rem;
-}
-
-.avatar {
-  background-color: var(--primary);
-  color: #fff;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+.card-unisex-header {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  padding: 1rem;
 }
 
-.card-name {
+
+.card-unisex-name {
   font-size: 1.8rem;
   font-weight: 500;
-  color: var(--primary);
-  margin-left: 3rem;
+  color:var(--primary);
+  font-family: "Montserrat";
 }
 
-.card-body img {
+.card-unisex-body img {
   width: 100%;
   height: auto;
 }
 
-.card-body p {
+.card-unisex-body p {
   text-align: center;
   padding: 0.5rem;
   font-weight: 600;
 }
 
-.card-footer {
+.card-unisex-footer {
   padding: 10px;
   text-align: center;
 }
 
-.card-footer a {
+.card-unisex-footer a {
   text-decoration: none;
   color: var(--info);
   font-weight: bold;
 }
 
-.card-footer a:hover {
+.card-unisex-footer a:hover {
   text-decoration: underline;
 }

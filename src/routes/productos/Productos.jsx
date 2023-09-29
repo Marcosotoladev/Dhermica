@@ -1,18 +1,11 @@
-import React from 'react'
-import CardFull from './components/CardFull';
-
-
-
-
+import React from "react";
 
 const Productos = () => {
   return (
     <div>
-       
       <h1>PRODUCTOS</h1>
-      <CardFull />
     </div>
-  )
-}
+  );
+};
 
 export default Productos;

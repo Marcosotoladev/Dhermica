@@ -1,5 +1,20 @@
-.trataContainer{
+.trataContainer {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.background-container {
+    width: 100%;
+    height: 100vh;
+    /* Ajusta la altura según tus necesidades */
+    background-image: url("./fondo.png");
+    /* Utiliza la ruta correcta de tu imagen */
+    background-size: cover;
+    /* Ajusta el tamaño de la imagen para cubrir todo el div */
+    background-repeat: no-repeat;
+    /* Evita la repetición de la imagen */
+    background-position: center;
+    /* Centra la imagen */
+    background-attachment: fixed;
+    /* Establece la imagen de fondo como fija */
 }
