@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import CardUnisex from './CardUnisex'; // Importa el componente TreatmentCard
+import CardUnisex from './components/cardUnisex/CardUnisex'; // Importa el componente TreatmentCard
 
 import "./Tratamientos.css";
 
@@ -41,6 +41,9 @@ function Tratamientos() {
       ) : (
         <>
         <div className="background-container">
+          <div className="titleTratamientos">
+            TRATAMIENTOS
+          </div>
           <div className="trataContainer">
             {tratamientos.map((tratamiento) => (
               <CardUnisex key={tratamiento.id} tratamiento={tratamiento} />

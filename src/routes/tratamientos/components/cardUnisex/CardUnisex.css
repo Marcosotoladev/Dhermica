@@ -2,8 +2,7 @@
 /* Estilos para cada tarjeta */
 .card-unisex {
   font-family: 'Montserrat';
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   transition: transform 0.2s;
@@ -20,11 +19,13 @@
   align-items: center;
   justify-content: center;
   padding: 1rem;
+  background-color: var(--back);
+  border-radius: 20px 20px 0 0;
 }
 
 
 .card-unisex-name {
-  font-size: 1.8rem;
+  font-size: x-large;
   font-weight: 500;
   color:var(--primary);
   font-family: "Montserrat";
@@ -50,6 +51,7 @@
   text-decoration: none;
   color: var(--info);
   font-weight: bold;
+  font-size: large;
 }
 
 .card-unisex-footer a:hover {

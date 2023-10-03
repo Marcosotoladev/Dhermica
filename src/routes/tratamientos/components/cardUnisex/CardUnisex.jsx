@@ -1,5 +1,5 @@
-import React from 'react';
-import './CardUnisex.css';
+import React from "react";
+import "./CardUnisex.css";
 
 const CardUnisex = ({ tratamiento }) => {
   return (
@@ -9,10 +9,10 @@ const CardUnisex = ({ tratamiento }) => {
       </div>
       <div className="card-unisex-body">
         <img src={tratamiento.img} alt={tratamiento.name} />
-        <p className="description-unisex">{tratamiento.description}</p>
       </div>
       <div className="card-unisex-footer">
-        <a href={tratamiento.url}>Ver más</a>
+        <a href={tratamiento.url}>Ver Todos</a>
+        <p className="description-unisex">{tratamiento.description}</p>
       </div>
     </div>
   );
