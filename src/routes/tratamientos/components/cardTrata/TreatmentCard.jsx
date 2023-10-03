@@ -10,10 +10,10 @@ const TreatmentCard = ({ tratamiento }) => {
       </div>
       <div className="card-body">
         <img src={tratamiento.img} alt={tratamiento.name} />
-        <p className="description">{tratamiento.description}</p>
       </div>
       <div className="card-footer">
-        <a href={tratamiento.url}>Ver más</a>
+        <a href={tratamiento.route}>Ver Más</a>
+        <p className="description">{tratamiento.description}</p>
       </div>
     </div>
   );

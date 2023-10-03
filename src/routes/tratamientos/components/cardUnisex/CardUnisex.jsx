@@ -11,7 +11,7 @@ const CardUnisex = ({ tratamiento }) => {
         <img src={tratamiento.img} alt={tratamiento.name} />
       </div>
       <div className="card-unisex-footer">
-        <a href={tratamiento.url}>Ver Todos</a>
+        <a href={tratamiento.route}>Ver Todos</a>
         <p className="description-unisex">{tratamiento.description}</p>
       </div>
     </div>

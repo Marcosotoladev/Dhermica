@@ -2,12 +2,12 @@
 /* Estilos para cada tarjeta */
 .card {
   font-family: 'Montserrat';
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   transition: transform 0.2s;
-  max-width: 70vh;
+  max-width: 60vh;
+  margin: 1rem;
 }
 
 .card:hover {
@@ -15,10 +15,12 @@
 }
 
 .card-header {
-  background-color: var(--back);
   display: flex;
   align-items: center;
+  justify-content: space-around;
   padding: 1rem;
+  background-color: var(--back);
+  border-radius: 20px 20px 0 0;
 }
 
 .avatar {
@@ -34,10 +36,10 @@
 }
 
 .card-name {
-  font-size: 1.8rem;
+  font-size: x-large;
   font-weight: 500;
-  color: var(--primary);
-  margin-left: 3rem;
+  color:var(--primary);
+  font-family: "Montserrat";
 }
 
 .card-body img {

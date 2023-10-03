@@ -1,0 +1,30 @@
+.ellasContainer {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.background-container-ellas {
+    width: 100%;
+    height: 100vh;
+    /* Ajusta la altura según tus necesidades */
+    background-image: url("./ellasFondo.png");
+    /* Utiliza la ruta correcta de tu imagen */
+    background-size: cover;
+    /* Ajusta el tamaño de la imagen para cubrir todo el div */
+    background-repeat: no-repeat;
+    /* Evita la repetición de la imagen */
+    background-position: center;
+    /* Centra la imagen */
+    background-attachment: fixed;
+    /* Establece la imagen de fondo como fija */
+}
+
+.titleEllas{
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
+    color: white;
+    font-family: 'Montserrat';
+    background-color: #c4c8c580;
+}
