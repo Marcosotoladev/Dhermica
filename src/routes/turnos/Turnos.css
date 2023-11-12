@@ -1,0 +1,75 @@
+.turnos {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  .date-picker {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .profesional {
+    margin-bottom: 40px;
+  }
+  
+  .horarios {
+    margin-bottom: 30px;
+  }
+  
+  .horario {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .hora {
+    font-weight: bold;
+  }
+  
+  .turno {
+    display: flex;
+    align-items: center;
+  }
+  
+  .datos {
+    margin-right: 10px;
+  }
+  
+  .eliminar {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .disponible {
+    color: green;
+  }
+  
+  .formulario-turno {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input {
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  
+  .submit {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .profesionales {
+    display: flex;
+    gap: 6rem;
+  }
