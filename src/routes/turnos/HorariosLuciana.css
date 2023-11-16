@@ -42,3 +42,9 @@
 .title-horarios-lu {
 text-align: center;
 }
+
+.columna {
+  width: 50%; /* O cualquier otro valor que sume 100% con el otro componente */
+}
+
+

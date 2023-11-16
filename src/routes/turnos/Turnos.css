@@ -1,18 +1,33 @@
 .turnos {
     font-family: "Montserrat";
     margin: 1rem;
-}
-
-.formulario-fecha {
+  }
+  
+  .formulario-fecha {
     text-align: center;
   }
   
+  .input-container {
+    display: flex;
+    align-items: center; /* Centra verticalmente el ícono con el input */
+    border: 1px solid #ccc; /* Agrega un borde alrededor del contenedor */
+    border-radius: 5px; /* Añade esquinas redondeadas al borde */
+    overflow: hidden; /* Oculta el desbordamiento del ícono si es más grande que el input */
+  }
+  
   .input-date {
-    width: 100%;
-    margin-bottom: 10px;
+    flex: 1; /* Ocupa el espacio restante */
+    margin: 0; /* Elimina el margen del input para evitar duplicados */
     padding: 10px;
     box-sizing: border-box;
     font-size: x-large;
+    border: none; /* Elimina el borde del input para evitar duplicados */
+  }
+  
+  /* Estilo del ícono */
+  .calendar-icon {
+    margin-right: 10px; /* Espacio entre el ícono y el input */
+    font-size: x-large; /* Tamaño del ícono igual al font-size del input */
   }
   
   .submit:hover {
@@ -22,8 +37,15 @@
   .title-turnos {
     text-align: center;
   }
-
+  
   .horarios-turnos {
     display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+  
+  .horarios-turnos-container {
+    display: flex;
+    justify-content: space-between;
     gap: 1rem;
   }

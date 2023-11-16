@@ -83,7 +83,7 @@ const HorariosLuciana = ({ fecha }) => {
               <tr>
                 <th>Hora</th>
                 <th>Nombre</th>
-                <th>Servicio</th>
+                <th>Tratamiento</th>
                 <th>Acción</th>
               </tr>
             </thead>
