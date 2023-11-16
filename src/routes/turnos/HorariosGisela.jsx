@@ -3,12 +3,14 @@ import React, { useState, useEffect } from "react";
 import { db } from "../../firebase";
 import FormularioTurno from "./FormularioTurno";
 import "./HorariosLuciana.css"; // Importar el archivo de estilos
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const HorariosGisela = ({ fecha }) => {
   const [turnos, setTurnos] = useState([]);
 
   useEffect(() => {
-    const profesional = "Gisela"; // Cambié el nombre del profesional
+    const profesional = "Gisela";
     db.collection(`turnos${profesional}`)
       .where("fecha", "==", fecha)
       .onSnapshot((snapshot) => {
@@ -26,16 +28,27 @@ const HorariosGisela = ({ fecha }) => {
   }
 
   const eliminarTurno = (id) => {
-    const profesional = "Gisela"; // Cambié el nombre del profesional
-    db.collection(`turnos${profesional}`)
-      .doc(id)
-      .delete()
-      .then(() => {
-        console.log("Turno eliminado con éxito");
-      })
-      .catch((error) => {
-        console.error("Error al eliminar el turno: ", error);
-      });
+    const profesional = "Gisela";
+  
+    // Mostrar un cuadro de diálogo de confirmación
+    const confirmacion = window.confirm('¿Estás seguro de que deseas eliminar este turno?');
+
+    // Verificar si el usuario confirmó la eliminación
+    if (confirmacion) {
+      db.collection(`turnos${profesional}`)
+        .doc(id)
+        .delete()
+        .then(() => {
+          toast.success('Turno eliminado con éxito', {
+            position: toast.POSITION.TOP_CENTER,
+            autoClose: 1500,
+          });
+          console.log("Turno eliminado con éxito");
+        })
+        .catch((error) => {
+          console.error("Error al eliminar el turno: ", error);
+        });
+    }
   };
 
   const convertirAHora24 = (hora) => {
@@ -59,6 +72,7 @@ const HorariosGisela = ({ fecha }) => {
 
   return (
     <>
+      <ToastContainer />
       <div className="horarios">
         <div className="title-horarios-lu">
           <h2>Gisela</h2>
@@ -102,8 +116,8 @@ const HorariosGisela = ({ fecha }) => {
             <FormularioTurno profesional="Gisela" fecha={fecha} />
           </div>
           <div className="title-horarios-lu">
-          <h2>Gisela</h2>
-        </div>
+            <h2>Gisela</h2>
+          </div>
         </div>
       </div>
     </>
@@ -111,3 +125,4 @@ const HorariosGisela = ({ fecha }) => {
 };
 
 export default HorariosGisela;
+
