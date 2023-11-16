@@ -1,27 +1,42 @@
-
-import React, { useState } from 'react';
-import './Turnos.css';
-import Horarios from './Horarios';
-import FormularioTurno from './FormularioTurno';
+import React, { useState } from "react";
+import "./Turnos.css";
+import HorariosLuciana from "./HorariosLuciana";
+import HorariosGisela from "./HorariosGisela";
 
 const Turnos = () => {
-  const [fecha, setFecha] = useState(new Date().toISOString().substr(0, 10));
+  const [fecha, setFecha] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(fecha);
+  };
 
   return (
     <div className="turnos">
-      <input type="date" value={fecha} onChange={(e) => setFecha(e.target.value)} className="date-picker" />
-<div className='profesionales'>
-      <div className="profesional">
-        <h1>Luciana</h1>
-        <Horarios profesional="Luciana" fecha={fecha} />
-        <FormularioTurno profesional="Luciana" fecha={fecha} />
+      <div className="title-turnos">
+        {" "}
+        <h1>Turnos</h1>
       </div>
-      <div className="profesional">
-        <h1>Gisela</h1>
-        <Horarios profesional="Gisela" fecha={fecha} />
-        <FormularioTurno profesional="Gisela" fecha={fecha} />
-      </div>
-    </div>
+
+      <form onSubmit={handleSubmit} className="formulario-fecha">
+        <label htmlFor="fecha">
+          <h2>Selecciona una fecha:</h2>
+        </label>
+        <input
+          type="date"
+          id="fecha"
+          value={fecha}
+          onChange={(e) => setFecha(e.target.value)}
+          required
+          className="input-date"
+        />
+      </form>
+      {fecha && (
+        <div className="horarios-turnos">
+          <HorariosLuciana fecha={fecha} />
+          <HorariosGisela fecha={fecha} />
+        </div>
+      )}
     </div>
   );
 };

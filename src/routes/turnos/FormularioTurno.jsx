@@ -1,23 +1,24 @@
 import React, { useState } from 'react';
-import {db} from '../../firebase';
+import { db } from '../../firebase';
+import './FormularioTurno.css'; // Asegúrate de tener un archivo CSS asociado
 
 const FormularioTurno = ({ profesional, fecha }) => {
   const [nombre, setNombre] = useState('');
   const [servicio, setServicio] = useState('');
   const [hora, setHora] = useState('');
-  const [duracion, setDuracion] = useState(1); // Agrega un estado para la duración
+  const [duracion, setDuracion] = useState(1);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const turno = { nombre, servicio, hora, fecha, duracion: Number(duracion) }; // Convierte la duración a un número
+    const turno = { nombre, servicio, hora, fecha, duracion: Number(duracion) };
 
     db.collection(`turnos${profesional}`).add(turno)
       .then(() => {
         setNombre('');
         setServicio('');
         setHora('');
-        setDuracion(1); // Resetea la duración
+        setDuracion(1);
       })
       .catch((error) => {
         console.error("Error al agregar el turno: ", error);
@@ -45,3 +46,9 @@ const FormularioTurno = ({ profesional, fecha }) => {
 };
 
 export default FormularioTurno;
+
+
+
+
+
+

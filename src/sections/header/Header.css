@@ -31,6 +31,8 @@
   border-radius: 10px;
   letter-spacing: 2px;
   font-size: larger;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
 }
 
 .menuText:hover {

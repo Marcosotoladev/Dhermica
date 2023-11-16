@@ -1,0 +1,63 @@
+/* Estilos específicos para Gisela */
+.horarios-gisela {
+  margin-top: 50px;
+}
+
+.horarios-gisela h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.horarios-gisela-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.horarios-gisela-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.horarios-gisela-container th,
+.horarios-gisela-container td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.horarios-gisela-container th {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.horarios-gisela-container .hora {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.horarios-gisela-container .turno {
+  margin-top: 0;
+}
+
+.horarios-gisela-container .eliminar {
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.horarios-gisela-container .disponible {
+  font-size: 16px;
+  color: #4caf50;
+  font-weight: bold;
+}
+
+/* Estilos compartidos con Luciana (si hay estilos compartidos) */
+/* .horarios-gisela-container .otro-estilo-compartido {
+  ...
+} */
