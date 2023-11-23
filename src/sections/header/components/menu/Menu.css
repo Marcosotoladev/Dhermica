@@ -4,6 +4,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  gap: 3rem;
 }
 
 .menuItem {
@@ -11,6 +12,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+ 
 }
 
 .menuIcon {

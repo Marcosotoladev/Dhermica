@@ -15,11 +15,11 @@ const Header = () => {
           </div>
         </div>
         <div className="header-item-2">
-          {" "}
+
           <Navbar />
         </div>
         <div className="header-item-3">
-          {" "}
+
           <Menu />
         </div>
       </div>

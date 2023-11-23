@@ -50,7 +50,7 @@
     gap: 1rem;
   }
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 600px) {
     .horarios-turnos-container {
       display: flex;
       overflow-x: auto;

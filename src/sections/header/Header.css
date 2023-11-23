@@ -38,3 +38,13 @@
 .menuText:hover {
   color: var(--success); /* Cambia el color del texto al pasar el mouse por encima */
 }
+
+
+@media screen and (max-width: 600px) {
+.header{
+  display: flex;
+  flex-direction: column;
+}
+
+
+}
