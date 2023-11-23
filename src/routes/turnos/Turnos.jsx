@@ -26,7 +26,6 @@ const Turnos = () => {
           <h2>Selecciona una fecha:</h2>
         </label>
         <div className="input-container">
-
           <FontAwesomeIcon icon={faCalendarAlt} className="calendar-icon" />
           <input
             type="date"
@@ -39,16 +38,14 @@ const Turnos = () => {
         </div>
       </form>
 
-      
       <div className="horarios-turnos-container">
-  <div className="columna">
-    <HorariosLuciana fecha={fecha} />
-  </div>
-  <div className="columna">
-    <HorariosGisela fecha={fecha} />
-  </div>
-</div>
-
+        <div className="columna">
+          <HorariosLuciana fecha={fecha} />
+        </div>
+        <div className="columna">
+          <HorariosGisela fecha={fecha} />
+        </div>
+      </div>
     </div>
   );
 };
