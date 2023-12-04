@@ -30,15 +30,14 @@
   box-sizing: border-box;
   border-radius: 0 0 10px 10px;
   letter-spacing: 2px;
-  font-size: larger;
   font-family: "Montserrat", sans-serif;
-  font-weight: bold;
 }
 
 .solapa{
   display: flex;
-  font-size: 1rem;
+  font-size: 0.8rem;
   gap: 0.5rem;
+  margin-top: 0.8rem;
 }
 
 .menuText:hover {
@@ -52,9 +51,6 @@
   flex-direction: column;
 }
 
-.solapa{
-  margin-top: 0.8rem;
-}
 
 .navbar{
   font-size: 0.8rem;
