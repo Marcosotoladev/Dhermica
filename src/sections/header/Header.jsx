@@ -15,16 +15,23 @@ const Header = () => {
           </div>
         </div>
         <div className="header-item-2">
-
           <Navbar />
         </div>
         <div className="header-item-3">
-
           <Menu />
         </div>
       </div>
-      <div className="header-item-4">
-        <a href="/Turnos"><span className="menuText">Turnos</span></a>
+      <div className="solapa">
+        <div className="header-item-4">
+          <a href="/Turnos">
+            <span className="menuText">Turnos</span>
+          </a>
+        </div>
+        <div className="header-item-4">
+          <a href="/Recordatorios">
+            <span className="menuText">Recordatorios</span>
+          </a>
+        </div>
       </div>
     </div>
   );

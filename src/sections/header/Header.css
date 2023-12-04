@@ -28,11 +28,17 @@
   text-decoration: none;
   color: #fff;
   box-sizing: border-box;
-  border-radius: 10px;
+  border-radius: 0 0 10px 10px;
   letter-spacing: 2px;
   font-size: larger;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
+}
+
+.solapa{
+  display: flex;
+  font-size: 1rem;
+  gap: 0.5rem;
 }
 
 .menuText:hover {
@@ -46,5 +52,15 @@
   flex-direction: column;
 }
 
+.solapa{
+  margin-top: 0.8rem;
+}
 
+.navbar{
+  font-size: 0.8rem;
+}
+
+.menu{
+  margin: 1rem;
+}
 }

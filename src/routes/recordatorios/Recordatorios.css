@@ -1,0 +1,107 @@
+/* Estilos generales */
+
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+.custom-container {
+    margin: 20px;
+}
+
+.title-recordatorios {
+    text-align: center;
+    color: var(--secundary);
+    font-family: 'Montserrat';
+}
+
+.custom-heading {
+    text-align: center;
+    padding: 10px;
+    font-family: 'Montserrat';
+    background-color: var(--secundary);
+    color: #fff;
+    margin-top: 3rem;
+    border-radius: 10px;
+}
+
+/* Formulario */
+.custom-form {
+    padding: 10px;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.custom-form-group {
+    margin-bottom: 15px;
+}
+
+.custom-input-group {
+    display: flex;
+}
+
+.custom-input-group-text {
+    background-color: #eee;
+    padding: 10px;
+}
+
+.custom-icon {
+    color: var(--success);
+    /* color del ícono */
+}
+
+.custom-form-control {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-left: 10px;
+    /* Espaciado entre el ícono y el input */
+}
+
+.btn-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.custom-btn {
+    background-color: var(--success);
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    width: 40%;
+    justify-content: center;
+}
+
+/* Tarjeta de Recordatorio */
+.custom-card {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.custom-card-body {
+    padding: 15px;
+}
+
+.custom-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.custom-text-success {
+    color: green;
+}
+
+.custom-text-danger {
+    color: red;
+}
+
+.custom-paragraph {
+    margin-top: 10px;
+}
+
+.custom-btn-i{
+    margin-left: 1rem;
+}

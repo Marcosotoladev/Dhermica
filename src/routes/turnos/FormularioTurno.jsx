@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { db } from "../../firebase";
+import { toast } from "react-toastify";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUser,
@@ -23,6 +24,13 @@ const FormularioTurno = ({ profesional, fecha }) => {
     db.collection(`turnos${profesional}`)
       .add(turno)
       .then(() => {
+
+        toast.success("Turno agregado con éxito", {
+          position: "top-center",
+          autoClose: 2000,
+        });
+
+
         setNombre("");
         setServicio("");
         setHora("");
@@ -30,6 +38,13 @@ const FormularioTurno = ({ profesional, fecha }) => {
       })
       .catch((error) => {
         console.error("Error al agregar el turno: ", error);
+
+        toast.error("Hubo un error al agregar el turno", {
+          position: "top-center",
+          autoClose: 2000,
+        });
+
+
       });
   };
 

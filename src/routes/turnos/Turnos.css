@@ -55,9 +55,10 @@
       display: flex;
       overflow-x: auto;
       flex-wrap: nowrap;
+      gap: 10rem;
     }
     
     .columna {
-      min-width: 100%; /* Esto asegura que cada columna tenga al menos el ancho de la pantalla */
+      min-width: 95%; /* Esto asegura que cada columna tenga al menos el ancho de la pantalla */
     }
   }
