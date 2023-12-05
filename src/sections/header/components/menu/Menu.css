@@ -28,6 +28,7 @@
 
 .menuText{
   color: var(--back);
+  text-decoration: none;
 }
 
 /* Agregar efecto de rebote en hover */
