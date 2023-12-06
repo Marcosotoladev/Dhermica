@@ -1,0 +1,101 @@
+/* Set box-sizing to border-box for all elements */
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Apply styles to the login container */
+  .register-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  /* Style the login form */
+  .register-form {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .register-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Montserrat';
+    color:var(--primary) ;
+  }
+  
+  /* Style the input groups */
+  .register-input-group {
+    margin-bottom: 15px;
+  }
+  
+  .register-input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .register-input-group input {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Style the "Olvidaste tu contraseña?" link */
+  .register-olvidar {
+    margin-bottom: 15px;
+  }
+  
+  .login-olvidar a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .register-olvidar a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Style the login button */
+  .register-button {
+    background-color: var(--secundary);
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .register-button:hover {
+    background-color: var(--success);
+  }
+  
+  /* Style the "No tenés cuenta?" link */
+  .register-tengo {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .register-tengo a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .register-tengo a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Style error message */
+  .error-message {
+    color: #dc3545;
+    margin-top: 15px;
+  }
+  

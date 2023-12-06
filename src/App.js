@@ -9,7 +9,6 @@ import Ellas from './routes/ellas/Ellas.jsx';
 import Ellos from './routes/ellos/Ellos.jsx';
 import Turnos from './routes/turnos/Turnos.jsx';
 import Recordatorios from './routes/recordatorios/Recordatorios.jsx';
-import AuthForm from './routes/authForm/AuthForm.jsx';
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import './styles/Styles.css';
@@ -33,7 +32,7 @@ export const App = () => {
           <Route path="/ellos" element={<Ellos />} />
           <Route path="/Turnos" element={<Turnos />} />
           <Route path="/Recordatorios" element={<Recordatorios />} />
-          <Route path="/AuthForm" element={<AuthForm />} />
+
           <Route path="/Register" element={<Register />} />
           <Route path="/Login" element={<Login />} />
         </Routes>

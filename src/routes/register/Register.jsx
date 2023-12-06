@@ -1,12 +1,13 @@
-// src/components/auth/Register.jsx
-import React, { useState } from 'react';
-import { auth } from '../../firebase';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { auth } from "../../firebase";
+import { useNavigate } from "react-router-dom";
+import { sendPasswordResetEmail } from "firebase/auth";
+import "./Register.css";
 
 const Register = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [displayName, setDisplayName] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [displayName, setDisplayName] = useState("");
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
@@ -16,18 +17,30 @@ const Register = () => {
     try {
       await auth.createUserWithEmailAndPassword(email, password);
       await auth.currentUser.updateProfile({ displayName });
-      navigate('/');
+      navigate("/");
+    } catch (error) {
+      setError(error.message);
+    }
+  };
+
+  const handleForgotPassword = async () => {
+    try {
+      await sendPasswordResetEmail(auth, email);
+      setError(null);
+      alert(
+        "Se ha enviado un correo electrónico para restablecer tu contraseña. Por favor, revisa tu bandeja de entrada."
+      );
     } catch (error) {
       setError(error.message);
     }
   };
 
   return (
-    <div className="auth-container">
-      <div className="auth-form">
-        <h2>Sign Up</h2>
+    <div className="register-container">
+      <div className="register-form">
+        <h2>Crear Cuenta</h2>
         <form>
-          <div className="input-group">
+          <div className="register-input-group">
             <label>Nombre:</label>
             <input
               type="text"
@@ -36,12 +49,16 @@ const Register = () => {
             />
           </div>
 
-          <div className="input-group">
+          <div className="register-input-group">
             <label>Email:</label>
-            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </div>
 
-          <div className="input-group">
+          <div className="register-input-group">
             <label>Contraseña:</label>
             <input
               type="password"
@@ -49,11 +66,18 @@ const Register = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-
-          <button className="auth-button" onClick={handleSignUp}>
+          <p className="register-olvidar">
+            <a href="/" onClick={() => handleForgotPassword()}>
+              ¿Olvidaste tu contraseña?
+            </a>
+          </p>
+          <button className="register-button" onClick={handleSignUp}>
             Crear Cuenta
           </button>
+
         </form>
+
+        <p className="register-tengo">¿Ya tenés una cuenta? <a href="Login">Iniciá Sesión</a></p>
 
         {error && <p className="error-message">{error}</p>}
       </div>
