@@ -1,11 +1,11 @@
 import React from 'react'
-import Carousel from '../../components/carousel/Carousel'
+import Slider from '../../components/carousel/carousel/Slider'
 import './Home.css'
 
 const Home = () => {
   return (
     <>
-      <Carousel />
+      <Slider />
     </>
   )
 }

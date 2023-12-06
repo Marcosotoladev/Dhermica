@@ -1,0 +1,71 @@
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.nav-button {
+  position: absolute;
+  top: 95%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  cursor: pointer;
+  color: #ddd;
+  background: none;
+  border: none;
+  padding: 0;
+  outline: none;
+}
+
+.nav-button:hover {
+  color: var(--info);
+}
+
+.nav-button.left {
+  left: 0;
+}
+
+.nav-button.right {
+  right: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 25rem;
+  cursor: pointer;
+}
+
+.dots-container {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ddd;
+  /* Color de los puntos inactivos */
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: var(--info);
+  /* Color del punto activo */
+}
+
+
+@media screen and (max-width: 600px) {
+
+  .carousel-container{
+height: 12rem;
+  }
+}
