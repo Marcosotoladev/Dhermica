@@ -31,14 +31,23 @@
   text-decoration: none;
 }
 
+.auth{
+  display: flex;
+  gap: 1rem;
+}
+
 /* Agregar efecto de rebote en hover */
 .menuItem:hover .menuIcon {
   animation: bounce 0.5s ease infinite; /* Aplicar la animación de rebote en hover */
 }
 
 /* Cambiar el color de texto en hover */
-.menuItem:hover .menuText {
+.menuText:hover {
   color: var(--success); /* Cambia el color del texto al pasar el mouse por encima */
+}
+
+.btn-logout:hover {
+  background-color: var(--success);
 }
 
 /* Definir la animación de rebote */

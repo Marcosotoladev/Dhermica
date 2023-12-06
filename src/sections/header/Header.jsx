@@ -7,6 +7,7 @@ import { auth } from '../../firebase'; // Asegúrate de importar la instancia de
 
 const Header = () => {
   const [user, setUser] = useState(null);
+  const allowedUserIds = ["9IrqQ1yarpaXSjlV0rhWoaabhQ63", "P3K1Ogb0MLdTNZuXgKKQptaPKHH3"]; // Agrega más IDs de usuarios autorizados según sea necesario
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
@@ -15,6 +16,8 @@ const Header = () => {
 
     return () => unsubscribe();
   }, []);
+
+  const isUserAuthorized = user && allowedUserIds.includes(user.uid);
 
   return (
     <div>
@@ -32,7 +35,7 @@ const Header = () => {
         </div>
       </div>
 
-      {user && user.uid === "9IrqQ1yarpaXSjlV0rhWoaabhQ63" && (
+      {isUserAuthorized && (
         <>
           <div className="solapa">
             <div className="header-item-4">
@@ -53,4 +56,5 @@ const Header = () => {
 };
 
 export default Header;
+
 

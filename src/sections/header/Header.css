@@ -31,12 +31,12 @@
   border-radius: 0 0 10px 10px;
   letter-spacing: 2px;
   font-family: "Montserrat", sans-serif;
+  border: solid 1px var(--secundary);
 }
 
 .solapa{
   display: flex;
-  font-size: 0.8rem;
-  gap: 0.5rem;
+  font-size: 0.9rem;
   margin-top: 0.8rem;
 }
 

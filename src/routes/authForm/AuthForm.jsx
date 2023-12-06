@@ -64,7 +64,7 @@ const AuthForm = () => {
           <form>
             {!isRegistered && (
               <div className="input-group">
-                <label>Name:</label>
+                <label>Nombre:</label>
                 <input
                   type="text"
                   value={displayName}
@@ -79,7 +79,7 @@ const AuthForm = () => {
             </div>
 
             <div className="input-group">
-              <label>Password:</label>
+              <label>Contraseña:</label>
               <input
                 type="password"
                 value={password}
@@ -89,11 +89,11 @@ const AuthForm = () => {
 
             {isRegistered ? (
               <button className="auth-button" onClick={handleSignIn}>
-                Sign In
+                Iniciar Sesión
               </button>
             ) : (
               <button className="auth-button" onClick={handleSignUp}>
-                Sign Up
+                Crear Cuenta
               </button>
             )}
 
@@ -106,9 +106,9 @@ const AuthForm = () => {
         </div>
       ) : (
         <div className="user-info">
-          <h2>Welcome, {user.displayName || user.email}!</h2>
+          <h2>Hola {user.displayName || user.email}!</h2>
           <button className="auth-button" onClick={handleSignOut}>
-            Sign Out
+            Cerrar Sesión
           </button>
         </div>
       )}

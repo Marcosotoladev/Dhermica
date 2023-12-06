@@ -14,7 +14,8 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import './styles/Styles.css';
 import './App.css';
-
+import Register from './routes/register/Register.jsx';
+import Login from './routes/login/Login.jsx';
 
 
 export const App = () => {
@@ -33,6 +34,8 @@ export const App = () => {
           <Route path="/Turnos" element={<Turnos />} />
           <Route path="/Recordatorios" element={<Recordatorios />} />
           <Route path="/AuthForm" element={<AuthForm />} />
+          <Route path="/Register" element={<Register />} />
+          <Route path="/Login" element={<Login />} />
         </Routes>
         <ToastContainer />
       </Router>
