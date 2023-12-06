@@ -48,20 +48,6 @@
     border-radius: 4px;
   }
   
-  /* Style the "Olvidaste tu contraseña?" link */
-  .register-olvidar {
-    margin-bottom: 15px;
-  }
-  
-  .login-olvidar a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .register-olvidar a:hover {
-    text-decoration: underline;
-  }
-  
   /* Style the login button */
   .register-button {
     background-color: var(--secundary);

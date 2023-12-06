@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { auth } from "../../firebase";
 import { useNavigate } from "react-router-dom";
 import { sendPasswordResetEmail } from "firebase/auth";
-import "./Login.css"
+import "./Login.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -57,9 +57,9 @@ const Login = () => {
               />
             </div>
             <p className="login-olvidar">
-              <a href="/" onClick={() => handleForgotPassword()}>
+              <p onClick={() => handleForgotPassword()}>
                 ¿Olvidaste tu contraseña?
-              </a>
+              </p>
             </p>
             <button className="login-button" onClick={handleSignIn}>
               Iniciar Sesión

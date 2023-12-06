@@ -53,12 +53,12 @@
     margin-bottom: 15px;
   }
   
-  .login-olvidar a {
+  .login-olvidar p {
     color: #007bff;
     text-decoration: none;
   }
   
-  .login-olvidar a:hover {
+  .login-olvidar p:hover {
     text-decoration: underline;
   }
   
