@@ -47,9 +47,9 @@ const Menu = () => {
             <div>
               <span>
                 {isLoggedIn ? (
-                  <button className="btn-logout" onClick={handleSignOut}>
+                  <a href="/" className="logout" onClick={handleSignOut}>
                     Cerrar Sesión
-                  </button>
+                  </a>
                 ) : (
                   <a href="Login" className="menuText">
                     Iniciar Sesión

@@ -46,8 +46,12 @@
   color: var(--success); /* Cambia el color del texto al pasar el mouse por encima */
 }
 
-.btn-logout:hover {
-  background-color: var(--success);
+.logout{
+  color: rgb(95, 138, 245);
+}
+
+.logout:hover {
+  color: var(--success);
 }
 
 /* Definir la animación de rebote */
