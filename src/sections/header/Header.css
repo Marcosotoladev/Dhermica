@@ -39,6 +39,8 @@
   display: flex;
   font-size: 0.9rem;
   margin-top: 0.8rem;
+  position: absolute;
+  z-index: 1;
 }
 
 .menuText:hover {
