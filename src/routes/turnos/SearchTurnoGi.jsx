@@ -44,7 +44,8 @@ const SearchTurnos = () => {
         <thead>
           <tr>
             <th>Fecha</th>
-            <th>Nombre</th> {/* Agregamos la columna del nombre */}
+            <th>Hora</th>
+            <th>Nombre</th> 
             <th>Servicio</th>
             <th>Duración</th>
           </tr>
@@ -55,7 +56,8 @@ const SearchTurnos = () => {
               <td>
                 {format(parse(turno.data.fecha, 'yyyy-MM-dd', new Date()), 'dd/MM/yy')}
               </td>
-              <td>{turno.data.nombre}</td> {/* Mostramos el nombre del turno */}
+              <td>{turno.data.hora}</td>
+              <td>{turno.data.nombre}</td> 
               <td>{turno.data.servicio}</td>
               <td>{turno.data.duracion}</td>
             </tr>

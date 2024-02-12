@@ -13,6 +13,7 @@
   border: 1px solid #ddd;
   padding: 8px;
   text-align: left;
+  word-wrap: break-word;
 }
 
 .horarios-table th {
@@ -43,9 +44,7 @@
 text-align: center;
 }
 
-.columna {
-  width: 50%; /* O cualquier otro valor que sume 100% con el otro componente */
-}
+
 
 
 #searchButton {
