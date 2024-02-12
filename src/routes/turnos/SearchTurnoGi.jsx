@@ -11,6 +11,13 @@ const SearchTurnos = () => {
     setNombre(event.target.value);
   };
 
+  const formatDuracion = (duracion) => {
+    const hours = Math.floor(duracion);
+    const minutes = Math.round((duracion - hours) * 60);
+    return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
+  };
+
+
   useEffect(() => {
     if (!nombre) {
       setTurnos([]);
@@ -47,7 +54,7 @@ const SearchTurnos = () => {
             <th>Hora</th>
             <th>Nombre</th> 
             <th>Servicio</th>
-            <th>Duración</th>
+            <th>Tiempo</th>
           </tr>
         </thead>
         <tbody>
@@ -59,7 +66,7 @@ const SearchTurnos = () => {
               <td>{turno.data.hora}</td>
               <td>{turno.data.nombre}</td> 
               <td>{turno.data.servicio}</td>
-              <td>{turno.data.duracion}</td>
+              <td>{formatDuracion(turno.data.duracion)}</td>
             </tr>
           ))}
         </tbody>
