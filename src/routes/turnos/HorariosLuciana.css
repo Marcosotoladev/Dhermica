@@ -48,3 +48,24 @@ text-align: center;
 }
 
 
+#searchButton {
+  background-color: var(--primary); /* Color de fondo */
+  border: none; /* Sin borde */
+  color: white; /* Color del texto */
+  padding: 15px 32px; /* Espaciado interno */
+  text-align: center; /* Alineación del texto */
+  text-decoration: none; /* Sin decoración de texto */
+  display: inline-block; /* Mostrar como bloque en línea */
+  font-size: 16px; /* Tamaño de fuente */
+  margin: 4px 2px; /* Margen */
+  cursor: pointer; /* Cursor */
+  border-radius: 8px; /* Radio de borde */
+}
+
+#searchButton:hover {
+  background-color: var(--secundary); /* Cambiar color de fondo en hover */
+}
+
+#searchButton:active {
+  background-color: #3e8e41; /* Cambiar color de fondo al hacer clic */
+}

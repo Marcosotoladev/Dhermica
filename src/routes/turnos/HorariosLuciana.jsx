@@ -1,4 +1,3 @@
-// HorariosLuciana.jsx
 import React, { useState, useEffect } from "react";
 import { db } from "../../firebase";
 import FormularioTurno from "./FormularioTurno";
@@ -70,12 +69,19 @@ const HorariosLuciana = ({ fecha }) => {
     return null;
   };
 
+  const redirectToSearchTurno = () => {
+    window.location.href = "/SearchTurnoLu";
+  };
+
   return (
     <>
       <ToastContainer />
       <div className="horarios">
         <div className="title-horarios-lu">
           <h2>Luciana</h2>
+        </div>
+        <div>
+          <button id="searchButton" onClick={redirectToSearchTurno}>Buscar Turno</button>
         </div>
         <div className="horarios-container">
           <table className="horarios-table">
@@ -125,4 +131,6 @@ const HorariosLuciana = ({ fecha }) => {
 };
 
 export default HorariosLuciana;
+
+
 

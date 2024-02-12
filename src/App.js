@@ -15,6 +15,8 @@ import './styles/Styles.css';
 import './App.css';
 import Register from './routes/register/Register.jsx';
 import Login from './routes/login/Login.jsx';
+import SearchTurnoLu from './routes/turnos/SearchTurnoLu.jsx';
+import SearchTurnoGi from './routes/turnos/SearchTurnoGi.jsx';
 
 
 export const App = () => {
@@ -31,8 +33,10 @@ export const App = () => {
           <Route path="/ellas" element={<Ellas />} />
           <Route path="/ellos" element={<Ellos />} />
           <Route path="/Turnos" element={<Turnos />} />
-          <Route path="/Recordatorios" element={<Recordatorios />} />
+          <Route path="/SearchTurnoLu" element={<SearchTurnoLu />} />
+          <Route path="/SearchTurnoGi" element={<SearchTurnoGi />} />
 
+          <Route path="/Recordatorios" element={<Recordatorios />} />
           <Route path="/Register" element={<Register />} />
           <Route path="/Login" element={<Login />} />
         </Routes>

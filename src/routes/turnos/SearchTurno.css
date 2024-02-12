@@ -1,0 +1,46 @@
+.search-turnos-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .search-turnos-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .search-turnos-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .search-turnos-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .search-turnos-table th,
+  .search-turnos-table td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .search-turnos-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  .search-turnos-table td {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .search-turnos-table tr:hover {
+    background-color: #f5f5f5;
+  }
+  
