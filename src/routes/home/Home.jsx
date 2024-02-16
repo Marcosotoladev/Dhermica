@@ -8,7 +8,9 @@ const Home = () => {
       <div className="titleHome">
         Salud y Belleza
       </div>
-      <Slider />
+      <div className='slider-container'>
+        <Slider />
+      </div>
     </>
   )
 }

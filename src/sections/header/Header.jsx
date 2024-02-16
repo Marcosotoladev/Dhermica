@@ -56,7 +56,7 @@ const Header = () => {
             </div>
             <div className="header-item-4">
               <a href="/Recordatorios">
-                <span className="menuText">Recordatorios</span>
+                <span className="menuText">Recordar</span>
               </a>
             </div>
           </div>

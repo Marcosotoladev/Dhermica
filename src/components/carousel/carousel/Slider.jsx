@@ -1,22 +1,24 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useSpring, animated } from 'react-spring';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import sliderHifu from './sliderHifu.png';
+import sliderDepi from './sliderDepi.png';
 import './Slider.css';
 
 const images = [
   {
     id: 1,
-    src: 'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
+    src: sliderHifu,
     link: 'https://www.ejemplo1.com',
   },
   {
     id: 2,
-    src:  'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
+    src:  sliderDepi,
     link: 'https://www.ejemplo2.com',
   },
   {
     id: 3,
-    src: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250',
+    src: sliderHifu,
     link: 'https://www.ejemplo3.com',
   },
 ];
@@ -52,7 +54,7 @@ const ImageCarousel = () => {
   useEffect(() => {
     timeoutRef.current = setTimeout(() => {
       nextImage();
-    }, 3000); // Cambia de imagen cada 5 segundos
+    }, 5000); // Cambia de imagen cada 5 segundos
 
     return () => {
       clearTimeout(timeoutRef.current);
