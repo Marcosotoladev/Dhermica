@@ -10,6 +10,37 @@
     width: 100%;
 }
 
+.textHome{
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    margin: 1rem;
+    border: solid 1px var(--info);
+    border-radius: 10px;
+}
+.text-home {
+    text-align: center;
+    font-size: x-large;
+    color: var(--secundary);
+}
+
+.bold{
+    font-size: x-large;
+    text-align: center;
+    color: var(--primary);
+}
+
+.subtitle{
+    color: var(--primary);
+    text-align: center;
+    border-bottom: 4px solid red;
+}
+
+.sub-title{
+    text-align: center;
+    margin: 3rem;
+}
+
 @media (max-width: 768px) {
     .titleHome {
         padding-top: 3rem;
