@@ -3,6 +3,7 @@ import { useSpring, animated } from 'react-spring';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import sliderHifu from './sliderHifu.png';
 import sliderDepi from './sliderDepi.png';
+import sliderLipo from './sliderLipo.png';
 import './Slider.css';
 
 const images = [
@@ -18,7 +19,7 @@ const images = [
   },
   {
     id: 3,
-    src: sliderHifu,
+    src: sliderLipo,
     link: 'https://www.ejemplo3.com',
   },
 ];
@@ -54,7 +55,7 @@ const ImageCarousel = () => {
   useEffect(() => {
     timeoutRef.current = setTimeout(() => {
       nextImage();
-    }, 5000); // Cambia de imagen cada 5 segundos
+    }, 6000); // Cambia de imagen cada 5 segundos
 
     return () => {
       clearTimeout(timeoutRef.current);
