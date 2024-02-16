@@ -28,3 +28,9 @@
     font-family: 'Montserrat';
     background-color: #c4c8c580;
 }
+
+@media (max-width: 768px) {
+    .titleEllos {
+      padding-top: 3rem;
+    }
+}

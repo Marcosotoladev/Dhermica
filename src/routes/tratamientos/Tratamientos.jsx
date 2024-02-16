@@ -40,15 +40,15 @@ function Tratamientos() {
         <div>Error: {error}</div>
       ) : (
         <>
-        <div className="background-container">
-          <div className="titleTratamientos">
-            TRATAMIENTOS
-          </div>
-          <div className="trataContainer">
-            {tratamientos.map((tratamiento) => (
-              <CardUnisex key={tratamiento.id} tratamiento={tratamiento} />
-            ))}
-          </div>
+          <div className="background-container">
+            <div className="titleTratamientos">
+              TRATAMIENTOS
+            </div>
+            <div className="trataContainer">
+              {tratamientos.map((tratamiento) => (
+                <CardUnisex key={tratamiento.id} tratamiento={tratamiento} />
+              ))}
+            </div>
           </div>
         </>
       )}

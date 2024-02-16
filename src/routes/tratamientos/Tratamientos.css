@@ -1,17 +1,19 @@
 .trataContainer {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
 }
 
 .background-container {
     width: 100%;
-    height: 100vh;
+    height: auto;
     /* Ajusta la altura según tus necesidades */
     background-image: url("./fondoJardin.png");
     /* Utiliza la ruta correcta de tu imagen */
     background-size: cover;
     /* Ajusta el tamaño de la imagen para cubrir todo el div */
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     /* Evita la repetición de la imagen */
     background-position: center;
     /* Centra la imagen */
@@ -26,4 +28,12 @@
     color: white;
     font-family: 'Montserrat';
     background-color: #c4c8c580;
+    padding: 0.5rem;
+}
+
+
+@media (max-width: 768px) {
+    .titleTratamientos {
+      padding-top: 3rem;
+    }
 }

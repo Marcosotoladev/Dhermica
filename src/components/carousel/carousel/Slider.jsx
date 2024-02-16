@@ -52,7 +52,7 @@ const ImageCarousel = () => {
   useEffect(() => {
     timeoutRef.current = setTimeout(() => {
       nextImage();
-    }, 5000); // Cambia de imagen cada 5 segundos
+    }, 3000); // Cambia de imagen cada 5 segundos
 
     return () => {
       clearTimeout(timeoutRef.current);

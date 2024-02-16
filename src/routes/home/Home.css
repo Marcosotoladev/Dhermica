@@ -1,0 +1,17 @@
+.titleHome {
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
+    color: white;
+    font-family: 'Montserrat';
+    background-color: #c4c8c580;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .titleHome {
+        padding-top: 3rem;
+    }
+}

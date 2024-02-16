@@ -20,7 +20,7 @@ const Header = () => {
   const isUserAuthorized = user && allowedUserIds.includes(user.uid);
 
   return (
-    <div>
+    <>
       <div className="header">
         <div className="header-item-1">
           <div className="name">
@@ -34,7 +34,18 @@ const Header = () => {
           <Menu />
         </div>
       </div>
-
+      <div className="solapa2">
+            <div className="header-item-4">
+              <a href="/Ellas">
+                <span className="menuText">Ellas</span>
+              </a>
+            </div>
+            <div className="header-item-4">
+              <a href="/Ellos">
+                <span className="menuText">Ellos</span>
+              </a>
+            </div>
+          </div>
       {isUserAuthorized && (
         <>
           <div className="solapa">
@@ -51,7 +62,7 @@ const Header = () => {
           </div>
         </>
       )}
-    </div>
+    </>
   );
 };
 
