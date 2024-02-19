@@ -17,7 +17,7 @@ import Register from './routes/register/Register.jsx';
 import Login from './routes/login/Login.jsx';
 import SearchTurnoLu from './routes/turnos/SearchTurnoLu.jsx';
 import SearchTurnoGi from './routes/turnos/SearchTurnoGi.jsx';
-
+import Badge from './components/badge/Badge.jsx';
 
 export const App = () => {
   return (
@@ -35,12 +35,12 @@ export const App = () => {
           <Route path="/Turnos" element={<Turnos />} />
           <Route path="/SearchTurnoLu" element={<SearchTurnoLu />} />
           <Route path="/SearchTurnoGi" element={<SearchTurnoGi />} />
-
           <Route path="/Recordatorios" element={<Recordatorios />} />
           <Route path="/Register" element={<Register />} />
           <Route path="/Login" element={<Login />} />
         </Routes>
         <ToastContainer />
+        <Badge />
       </Router>
     </>
 
