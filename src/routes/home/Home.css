@@ -45,4 +45,10 @@
     .titleHome {
         padding-top: 3rem;
     }
+    .text-home{
+        font-size: medium;
+    }
+    .bold{
+        font-size: medium;
+    }
 }
