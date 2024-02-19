@@ -63,7 +63,7 @@ const Navbar = () => {
           </div>
           <div>
             <Link
-              to="/productos"
+              to="https://dhermica.mitiendanube.com/"
               className={`navbar-item ${
                 activeIcon === "products" ? "active" : ""
               }`}
