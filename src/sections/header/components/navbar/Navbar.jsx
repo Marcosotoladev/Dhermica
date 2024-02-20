@@ -72,7 +72,7 @@ const Navbar = () => {
               <span
                 className={`text ${activeIcon === "products" ? "active" : ""}`}
               >
-                PRODUCTOS
+                TIENDA
               </span>
               <FontAwesomeIcon
                 icon={faStore} // Reemplaza por el nuevo icono (faStore)

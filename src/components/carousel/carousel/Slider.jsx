@@ -12,27 +12,27 @@ const images = [
   {
     id: 4,
     src: sliderTrata,
-    link: 'https://www.ejemplo3.com',
+    link: '',
   },
   {
     id: 1,
     src: sliderHifu,
-    link: 'https://www.ejemplo1.com',
+    link: '',
   },
   {
     id: 2,
     src:  sliderDepi,
-    link: 'https://www.ejemplo2.com',
+    link: '',
   },
   {
     id: 5,
     src: sliderVacum,
-    link: 'https://www.ejemplo3.com',
+    link: '',
   },
   {
     id: 3,
     src: sliderLipo,
-    link: 'https://www.ejemplo3.com',
+    link: '',
   },
 
 

@@ -11,7 +11,7 @@
 }
 
 .textHome {
-    color: var(--info);
+    color: var(--primary);
     padding: 1rem;
     margin: 1rem;
     border: solid 1px var(--info);
