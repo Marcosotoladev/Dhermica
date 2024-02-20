@@ -4,9 +4,16 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import sliderHifu from './sliderHifu.png';
 import sliderDepi from './sliderDepi.png';
 import sliderLipo from './sliderLipo.png';
+import sliderVacum from './sliderVacum.png';
+import sliderTrata from './sliderTrata.png';
 import './Slider.css';
 
 const images = [
+  {
+    id: 4,
+    src: sliderTrata,
+    link: 'https://www.ejemplo3.com',
+  },
   {
     id: 1,
     src: sliderHifu,
@@ -18,10 +25,17 @@ const images = [
     link: 'https://www.ejemplo2.com',
   },
   {
+    id: 5,
+    src: sliderVacum,
+    link: 'https://www.ejemplo3.com',
+  },
+  {
     id: 3,
     src: sliderLipo,
     link: 'https://www.ejemplo3.com',
   },
+
+
 ];
 
 const ImageCarousel = () => {
