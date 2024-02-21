@@ -2,7 +2,7 @@
 import React from 'react';
 import './Footer.css';
 import { FaPhone, FaMapMarkerAlt, FaFacebook, FaInstagram } from 'react-icons/fa';
-import { Diversity3 } from '@mui/icons-material';
+
 
 const Footer = () => {
     return (
@@ -43,22 +43,22 @@ const Footer = () => {
                     <div className="tratamientos-dropdown">
                         <span className="dropdown-title">ELLAS</span>
                         <div className="dropdown-content">
-                            <a href="#">Cejas</a>
-                            <a href="#">Corporales</a>
-                            <a href="#">Faciales</a>
-                            <a href="#">Manos</a>
-                            <a href="#">Pestañas</a>
-                            <a href="#">Pies</a>
+                            <a href="/Ellas">Cejas</a>
+                            <a href="/Ellas">Corporales</a>
+                            <a href="/Ellas">Faciales</a>
+                            <a href="/Ellas">Manos</a>
+                            <a href="/Ellas">Pestañas</a>
+                            <a href="/Ellas">Pies</a>
                         </div>
                     </div>
 
                     <div className="tratamientos-dropdown">
                         <span className="dropdown-title">ELLOS</span>
                         <div className="dropdown-content">
-                            <a href="#">Cejas</a>
-                            <a href="#">Corporales</a>
-                            <a href="#">Faciales</a>
-                            <a href="#">Pies</a>
+                            <a href="/Ellos">Cejas</a>
+                            <a href="/Ellos">Corporales</a>
+                            <a href="/Ellos">Faciales</a>
+                            <a href="/Ellos">Pies</a>
                         </div>
                     </div>
                 </div>
@@ -78,11 +78,8 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                
             </footer>
-            <div className="titleHome">
-                    Salud y Belleza
-                </div>
+            
         </>
     );
 };

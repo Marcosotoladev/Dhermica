@@ -1,8 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.e55c87a7.css",
-    "main.js": "/static/js/main.67a3298d.js",
+    "main.css": "/static/css/main.10cafe89.css",
+    "main.js": "/static/js/main.a8d3f50d.js",
     "static/js/787.8d0b3719.chunk.js": "/static/js/787.8d0b3719.chunk.js",
+    "static/media/promoPunta.png": "/static/media/promoPunta.9c9f2eef275bd38a1145.png",
+    "static/media/promoLipo.png": "/static/media/promoLipo.0623c6d4c4c318aa2968.png",
+    "static/media/promoHifu.png": "/static/media/promoHifu.c1ef8b2a8d4ca718a47b.png",
+    "static/media/promoSemi.png": "/static/media/promoSemi.8d2887c76c06fce04a8a.png",
+    "static/media/promoDefi.png": "/static/media/promoDefi.838abbf3c66be5923c52.png",
     "static/media/fondoJardin.png": "/static/media/fondoJardin.51b4f0ad79e993ebbc59.png",
     "static/media/ellosFondo.png": "/static/media/ellosFondo.0e50d07f3216f7e36246.png",
     "static/media/ellasFondo.png": "/static/media/ellasFondo.d24900a299754e957e7f.png",
@@ -15,12 +20,12 @@
     "static/media/Iwha.png": "/static/media/Iwha.6c83d1bf3c7ae94936fc.png",
     "static/media/AmsterdamFour.ttf": "/static/media/AmsterdamFour.64154e4485e61ccc7cd9.ttf",
     "index.html": "/index.html",
-    "main.e55c87a7.css.map": "/static/css/main.e55c87a7.css.map",
-    "main.67a3298d.js.map": "/static/js/main.67a3298d.js.map",
+    "main.10cafe89.css.map": "/static/css/main.10cafe89.css.map",
+    "main.a8d3f50d.js.map": "/static/js/main.a8d3f50d.js.map",
     "787.8d0b3719.chunk.js.map": "/static/js/787.8d0b3719.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e55c87a7.css",
-    "static/js/main.67a3298d.js"
+    "static/css/main.10cafe89.css",
+    "static/js/main.a8d3f50d.js"
   ]
 }

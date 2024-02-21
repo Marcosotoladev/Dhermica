@@ -1,0 +1,25 @@
+/* Promos.css */
+.promos-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  /* Propiedad para mejorar el scroll en iOS */
+}
+
+.promo {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  margin: 1rem;
+}
+
+.promo img {
+  width: 50vh;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .promo img {
+    width: 35vh;
+  }
+}

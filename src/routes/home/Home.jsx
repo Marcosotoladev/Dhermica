@@ -1,6 +1,7 @@
 import React from 'react'
 import Slider from '../../components/carousel/carousel/Slider'
 import Marcas from './Marcas.png'
+import Promos from '../../components/promos/Promos'
 import './Home.css'
 
 const Home = () => {
@@ -18,7 +19,7 @@ const Home = () => {
       <h1 className='sub-title'>
         <span className='subtitle'>Nuestras Promos</span>
       </h1>
-
+      <Promos />
       <h1 className='sub-title'>
         <span className='subtitle'>Ubicanos</span>
       </h1>
@@ -35,12 +36,12 @@ const Home = () => {
         </iframe>
       </div>
       <div className='textHome'>
-      <p>
-        Contamos con un <strong>equipo profesional altamente capacitado</strong> y especializado en tratamientos estéticos y dermatológicos.
-      </p>
-    </div>
+        <p>
+          Contamos con un <strong>equipo profesional altamente capacitado</strong> y especializado en tratamientos estéticos y dermatológicos.
+        </p>
+      </div>
 
-    <img className='img-marcas' src={Marcas} alt="Marcas" />
+      <img className='img-marcas' src={Marcas} alt="Marcas" />
 
     </>
   )
