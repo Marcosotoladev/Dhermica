@@ -1,0 +1,22 @@
+.mis-datos-container {
+    margin: 3rem;
+}
+
+.user-data-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.user-data-table td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.user-data-table td:first-child {
+    font-weight: bold;
+}
+
+.user-data-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}

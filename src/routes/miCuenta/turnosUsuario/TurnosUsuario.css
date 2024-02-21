@@ -1,0 +1,22 @@
+.turnos-usuario-container {
+    width: 50%;
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.agendar-turno-btn {
+    background-color: var(--secundary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 1rem;
+}
+
+.agendar-turno-btn:hover {
+    background-color: var(--info);
+}
