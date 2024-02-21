@@ -20,6 +20,10 @@ import SearchTurnoGi from './routes/turnos/SearchTurnoGi.jsx';
 import Badge from './components/badge/Badge.jsx';
 import Footer from './sections/footer/Footer.jsx';
 
+import TurnosUsuario from './routes/turnosUsuario/TurnosUsuario.jsx';
+import ReservarTurno from './routes/turnosUsuario/ReservarTurno.jsx';
+
+
 export const App = () => {
   return (
     <>
@@ -39,6 +43,10 @@ export const App = () => {
           <Route path="/Recordatorios" element={<Recordatorios />} />
           <Route path="/Register" element={<Register />} />
           <Route path="/Login" element={<Login />} />
+
+          <Route path="/TurnosUsuario" element={<TurnosUsuario />} />
+          <Route path="/ReservarTurno" element={<ReservarTurno />} />
+
         </Routes>
         <ToastContainer />
         <Badge />
