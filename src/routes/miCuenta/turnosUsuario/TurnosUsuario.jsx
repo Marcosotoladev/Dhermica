@@ -10,12 +10,14 @@ import {
     faHourglass,
     faCalendar,
     faMoneyBillAlt,
-    faUserMd
+    faUserMd,
+    faEnvelope
 } from "@fortawesome/free-solid-svg-icons";
 
 const TurnosUsuario = () => {
     const [nombre, setNombre] = useState("");
     const [apellido, setApellido] = useState("");
+    const [correo, setCorreo] = useState("");
     const [servicio, setServicio] = useState("");
     const [hora, setHora] = useState("");
     const [fecha, setFecha] = useState("");
@@ -31,6 +33,7 @@ const TurnosUsuario = () => {
             if (userData) {
                 setNombre(userData.firstName || "");
                 setApellido(userData.lastName || "");
+                setCorreo(auth.currentUser.email || "");
             }
         }
     };
@@ -45,6 +48,7 @@ const TurnosUsuario = () => {
         const turno = {
             nombre,
             apellido,
+            correo,
             servicio,
             hora,
             fecha,
@@ -63,6 +67,7 @@ const TurnosUsuario = () => {
 
                 setNombre("");
                 setApellido("");
+                setCorreo("");
                 setServicio("");
                 setHora("");
                 setFecha("");
@@ -150,6 +155,17 @@ const TurnosUsuario = () => {
                         />
                     </div>
                     <div className="input-container">
+                        <FontAwesomeIcon icon={faEnvelope} className="input-icon" />
+                        <input
+                            type="email"
+                            value={correo}
+                            onChange={(e) => setCorreo(e.target.value)}
+                            placeholder="Correo"
+                            required
+                            className="input"
+                        />
+                    </div>
+                    <div className="input-container">
                         <FontAwesomeIcon icon={faBriefcase} className="input-icon" />
                         <input
                             type="text"
@@ -202,6 +218,7 @@ const TurnosUsuario = () => {
 };
 
 export default TurnosUsuario;
+
 
 
 

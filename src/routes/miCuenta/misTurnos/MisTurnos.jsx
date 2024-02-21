@@ -1,27 +1,46 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { db, auth } from "../../../firebase";
-
+import "./MisTurnos.css"; 
 
 const MisTurnos = () => {
     const [turnos, setTurnos] = useState([]);
+    const currentUserRef = useRef(auth.currentUser);
 
     useEffect(() => {
         const fetchTurnos = async () => {
-            if (auth.currentUser) {
+            if (currentUserRef.current) {
+                const currentUserEmail = currentUserRef.current.email;
+
+                // Consulta de los turnos filtrando por correo electrónico del usuario
                 const turnosRef = db.collection("turnosUsuarios");
-                const snapshot = await turnosRef.where("nombre", "==", auth.currentUser.displayName).get();
-                const turnosData = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+                const turnosSnapshot = await turnosRef
+                    .where("correo", "==", currentUserEmail)
+                    .get();
+                const turnosData = turnosSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+                console.log("Turnos recuperados de la base de datos:", turnosData);
+                console.log("Cantidad de turnos recuperados:", turnosData.length);
                 setTurnos(turnosData);
             }
         };
 
         fetchTurnos();
+
+        // Agregar observador de cambios de autenticación
+        const unsubscribe = auth.onAuthStateChanged(user => {
+            if (user) {
+                currentUserRef.current = user;
+                fetchTurnos();
+            }
+        });
+
+        // Devolver una función de limpieza para cancelar la suscripción al observador
+        return () => unsubscribe();
     }, []);
 
     return (
-        <div>
-            <h1>Mis Turnos</h1>
-            <table>
+        <div className="mis-turnos-container">
+            <h1 className="mis-turnos-title">Mis Turnos</h1>
+            <table className="mis-turnos-table">
                 <thead>
                     <tr>
                         <th>Fecha</th>
@@ -54,6 +73,13 @@ const MisTurnos = () => {
 };
 
 export default MisTurnos;
+
+
+
+
+
+
+
 
 
 
