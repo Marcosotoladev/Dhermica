@@ -1,7 +1,6 @@
 import React from 'react';
 import './MiCuenta.css';
 import MisDatos from './misDatos/MisDatos';
-import TurnosUsuario from './turnosUsuario/TurnosUsuario';
 import MisTurnos from './misTurnos/MisTurnos';
 
 
@@ -10,7 +9,6 @@ export const MiCuenta = () => {
         <>
             <h1>MiCuenta</h1>
             <MisDatos />
-            <TurnosUsuario />
             <MisTurnos />
         </>
     )

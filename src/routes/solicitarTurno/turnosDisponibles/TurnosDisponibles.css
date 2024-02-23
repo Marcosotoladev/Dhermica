@@ -1,0 +1,89 @@
+/* TurnosDisponibles.css */
+
+.turnos-disponibles {
+    margin: 3rem;
+}
+
+.title-turnos-disponibles {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.horarios-container {
+    margin-top: 20px;
+}
+
+.horarios-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.horarios-table th,
+.horarios-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.horarios-table th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+.horario-row:hover {
+    background-color: #f2f2f2;
+}
+
+.eliminar {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.eliminar:hover {
+    background-color: #c82333;
+}
+
+.disponible {
+    color: green;
+}
+
+.formulario-turno {
+    margin-top: 20px;
+}
+
+
+.fecha-input-container {
+    margin-bottom: 20px;
+}
+
+.formulario-fecha {
+    display: flex;
+    align-items: center;
+}
+
+.fecha-label {
+    margin-right: 10px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+}
+
+.input-date {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.estado.ocupado {
+    color: red;
+  }
+  
+  .estado.disponible {
+    color: green;
+  }
+  

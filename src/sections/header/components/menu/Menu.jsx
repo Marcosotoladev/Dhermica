@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShoppingCart, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faCalendarAlt, faUser } from "@fortawesome/free-solid-svg-icons";
 import { useAuth } from "../../../../routes/authForm/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { auth } from "../../../../firebase";
@@ -31,7 +31,9 @@ const Menu = () => {
       <div className="menu">
 
         <div className="menuItem">
-          <FontAwesomeIcon icon={faUser} size="2x" className="menuIcon" />
+          <a href="/MiCuenta" className="menu-user">
+            <FontAwesomeIcon icon={faUser} size="2x" className="menuIcon" />
+          </a>
           <div className="auth">
             <div>
               <span>
@@ -58,15 +60,19 @@ const Menu = () => {
               </span>
             </div>
           </div>
-          
+
         </div>
         <div className="menuItem">
-          <FontAwesomeIcon
-            icon={faShoppingCart}
-            size="2x"
-            className="menuIcon"
-          />
-          <span className="menuText">Carrito</span>
+          <a href="/SolicitarTurno" className="menu-turno">
+            <FontAwesomeIcon
+              icon={faCalendarAlt}
+              size="2x"
+              className="menuIcon"
+            />
+          </a>
+          <span className="menuText">
+            <a href="/SolicitarTurno">Turnos</a>
+          </span>
         </div>
       </div>
     </>

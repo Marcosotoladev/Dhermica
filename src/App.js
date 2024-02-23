@@ -20,6 +20,7 @@ import SearchTurnoGi from './routes/turnos/SearchTurnoGi.jsx';
 import Badge from './components/badge/Badge.jsx';
 import Footer from './sections/footer/Footer.jsx';
 import MiCuenta from './routes/miCuenta/MiCuenta.jsx';
+import SolicitarTurno from './routes/solicitarTurno/SolicitarTurno.jsx';
 
 
 
@@ -44,6 +45,7 @@ export const App = () => {
           <Route path="/Register" element={<Register />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/MiCuenta" element={<MiCuenta />} />
+          <Route path="/SolicitarTurno" element={<SolicitarTurno />} />
 
 
         </Routes>
