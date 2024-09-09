@@ -7,6 +7,8 @@ const SearchTurnos = () => {
   const [nombre, setNombre] = useState("");
   const [turnos, setTurnos] = useState([]);
   const [buscar, setBuscar] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [noResults, setNoResults] = useState(false);
 
   const handleNombreChange = (event) => {
     setNombre(event.target.value);
@@ -14,6 +16,8 @@ const SearchTurnos = () => {
 
   const handleBuscarClick = () => {
     setBuscar(true);
+    setIsLoading(true);
+    setNoResults(false);
   };
 
   const formatDuracion = (duracion) => {
@@ -25,6 +29,8 @@ const SearchTurnos = () => {
   useEffect(() => {
     if (!nombre || !buscar) {
       setTurnos([]);
+      setIsLoading(false);
+      setNoResults(false);
       return;
     }
 
@@ -44,6 +50,12 @@ const SearchTurnos = () => {
         );
 
         setTurnos(sortedTurnos);
+        setIsLoading(false);
+        setNoResults(sortedTurnos.length === 0);
+      }, (error) => {
+        console.error("Error al buscar turnos:", error);
+        setIsLoading(false);
+        setNoResults(true);
       });
 
     return () => unsubscribe();
@@ -60,37 +72,44 @@ const SearchTurnos = () => {
         placeholder="Ingrese nombre..."
       />
       <button onClick={handleBuscarClick} className="search-turnos-button">Buscar</button>
-      <h3>Resultados para "{nombre}"</h3>
-      <table className="search-turnos-table">
-        <thead>
-          <tr>
-            <th>Fecha</th>
-            <th>Hora</th>
-            <th>Nombre</th>
-            <th>Servicio</th>
-            <th>Tiempo</th>
-          </tr>
-        </thead>
-        <tbody>
-          {turnos.map((turno) => (
-            <tr key={turno.id}>
-              <td>
-                {format(parse(turno.data.fecha, 'yyyy-MM-dd', new Date()), 'dd/MM/yy')}
-              </td>
-              <td>{turno.data.hora}</td>
-              <td>{turno.data.nombre}</td> 
-              <td>{turno.data.servicio}</td>
-              <td>{formatDuracion(turno.data.duracion)}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      {isLoading ? (
+        <div className="loading-indicator">Cargando resultados...</div>
+      ) : noResults ? (
+        <div className="no-results">No se encontraron resultados para "{nombre}"</div>
+      ) : (
+        <>
+          <h3>Resultados para "{nombre}"</h3>
+          <table className="search-turnos-table">
+            <thead>
+              <tr>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Nombre</th>
+                <th>Servicio</th>
+                <th>Tiempo</th>
+              </tr>
+            </thead>
+            <tbody>
+              {turnos.map((turno) => (
+                <tr key={turno.id}>
+                  <td>
+                    {format(parse(turno.data.fecha, 'yyyy-MM-dd', new Date()), 'dd/MM/yy')}
+                  </td>
+                  <td>{turno.data.hora}</td>
+                  <td>{turno.data.nombre}</td> 
+                  <td>{turno.data.servicio}</td>
+                  <td>{formatDuracion(turno.data.duracion)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </>
+      )}
     </div>
   );
 };
 
 export default SearchTurnos;
-
 
 
 

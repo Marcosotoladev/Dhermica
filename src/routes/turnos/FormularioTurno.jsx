@@ -8,13 +8,24 @@ import {
   faClock,
   faHourglass,
 } from "@fortawesome/free-solid-svg-icons";
-import "./FormularioTurno.css"; // Asegúrate de tener un archivo CSS asociado
+import "./FormularioTurno.css";
 
 const FormularioTurno = ({ profesional, fecha }) => {
   const [nombre, setNombre] = useState("");
   const [servicio, setServicio] = useState("");
   const [hora, setHora] = useState("");
   const [duracion, setDuracion] = useState(1);
+
+  const capitalizeName = (name) => {
+    return name
+      .split(' ')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+      .join(' ');
+  };
+
+  const handleNombreChange = (e) => {
+    setNombre(capitalizeName(e.target.value));
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -24,12 +35,10 @@ const FormularioTurno = ({ profesional, fecha }) => {
     db.collection(`turnos${profesional}`)
       .add(turno)
       .then(() => {
-
         toast.success("Turno agregado con éxito", {
           position: "top-center",
           autoClose: 2000,
         });
-
 
         setNombre("");
         setServicio("");
@@ -43,8 +52,6 @@ const FormularioTurno = ({ profesional, fecha }) => {
           position: "top-center",
           autoClose: 2000,
         });
-
-
       });
   };
 
@@ -56,7 +63,7 @@ const FormularioTurno = ({ profesional, fecha }) => {
           <input
             type="text"
             value={nombre}
-            onChange={(e) => setNombre(e.target.value)}
+            onChange={handleNombreChange}
             placeholder="Nombre"
             required
             className="input"
