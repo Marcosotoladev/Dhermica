@@ -6,9 +6,14 @@ import { parse, format } from 'date-fns';
 const SearchTurnos = () => {
   const [nombre, setNombre] = useState("");
   const [turnos, setTurnos] = useState([]);
+  const [buscar, setBuscar] = useState(false);
 
   const handleNombreChange = (event) => {
     setNombre(event.target.value);
+  };
+
+  const handleBuscarClick = () => {
+    setBuscar(true);
   };
 
   const formatDuracion = (duracion) => {
@@ -18,22 +23,31 @@ const SearchTurnos = () => {
   };
 
   useEffect(() => {
-    if (!nombre) {
+    if (!nombre || !buscar) {
       setTurnos([]);
       return;
     }
 
     const unsubscribe = db.collection("turnosLuciana")
-      .orderBy("fecha", "desc")
+      .where("nombre", ">=", nombre)
+      .where("nombre", "<=", nombre + '\uf8ff')
+      .orderBy("nombre")
       .onSnapshot((snapshot) => {
-        const filteredTurnos = snapshot.docs
-          .map((doc) => ({ id: doc.id, data: doc.data() }))
-          .filter(turno => turno.data.nombre.toLowerCase().includes(nombre.toLowerCase()));
-        setTurnos(filteredTurnos);
+        const fetchedTurnos = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          data: doc.data(),
+        }));
+
+        // Ordenar manualmente por fecha en el frontend
+        const sortedTurnos = fetchedTurnos.sort((a, b) => 
+          new Date(b.data.fecha) - new Date(a.data.fecha)
+        );
+
+        setTurnos(sortedTurnos);
       });
 
     return () => unsubscribe();
-  }, [nombre]);
+  }, [nombre, buscar]);
 
   return (
     <div className="search-turnos-container">
@@ -45,6 +59,7 @@ const SearchTurnos = () => {
         onChange={handleNombreChange}
         placeholder="Ingrese nombre..."
       />
+      <button onClick={handleBuscarClick} className="search-turnos-button">Buscar</button>
       <h3>Resultados para "{nombre}"</h3>
       <table className="search-turnos-table">
         <thead>
@@ -75,6 +90,8 @@ const SearchTurnos = () => {
 };
 
 export default SearchTurnos;
+
+
 
 
 
